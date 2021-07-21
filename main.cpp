@@ -39,7 +39,10 @@ int main()
             case FREE_MODE:
             {
                 cout<< "Mode:FREE MODE"<<endl;
-                show_current_frame(cap_t);
+                Mat temp;
+                cap_t>>temp;
+                imshow("current frame",temp);
+                waitKey(1);
             }
                 break;
             default:
@@ -60,11 +63,4 @@ inline void test_Big_Island(){
 inline void test_Small_Island(){
     g_config_data.start =1;
     g_config_data.state =SMALL_RESOURCE_ISLAND_AUTO_RUN;
-}
-
-inline void show_current_frame(V4L2Capture cap_t){
-    Mat temp;
-    cap_t>>temp;
-    imshow("current frame",temp);
-    waitKey(1);
 }
