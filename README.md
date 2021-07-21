@@ -1,5 +1,4 @@
 # HITSZ_RoboMaster2021_Engineer
-~~~
 # README
 
 ## 1、工程结构
